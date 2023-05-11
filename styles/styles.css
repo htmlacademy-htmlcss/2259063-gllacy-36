@@ -46,6 +46,30 @@
   font-display: swap;
 }
 
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tooltip-open {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -162,7 +186,7 @@ body {
 .active-left-link::after {
   content: "";
   display: block;
-  background-image: url(/images/nav_catalog_active.svg);
+  background-image: url(../images/nav_catalog_active.svg);
   width: 12px;
   height: 6px;
 }
@@ -193,7 +217,7 @@ body {
 .navigation-left-item:nth-child(2) .notactive-left-link::after {
   content: "";
   display: block;
-  background-image: url(/images/nav_catalog.svg);
+  background-image: url(../images/nav_catalog.svg);
   width: 12px;
   height: 7px;
 }
@@ -246,7 +270,7 @@ body {
 }
 
 .navigation-right-item:nth-child(2) .active-right-link {
-  background-image: url(/images/nav_glass_active.svg);
+  background-image: url(../images/nav_glass_active.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 32px;
@@ -257,7 +281,7 @@ body {
 .navigation-right-item:nth-child(3) .active-right-link::before {
   content: "";
   display: block;
-  background-image: url(/images/nav_login_active.svg);
+  background-image: url(../images/nav_login_active.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -288,7 +312,7 @@ body {
 
 
 .navigation-right-item:nth-child(2) .notactive-right-link {
-  background-image: url(/images/nav_glass.svg);
+  background-image: url(../images/nav_glass.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 32px;
@@ -299,7 +323,7 @@ body {
 .navigation-right-item:nth-child(3) .notactive-right-link::before {
   content: "";
   display: block;
-  background-image: url(/images/nav_login.svg);
+  background-image: url(../images/nav_login.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -329,7 +353,7 @@ body {
 .navigation-right-item:nth-child(5) .cart-empty::before {
   content: "";
   display: block;
-  background-image: url(/images/nav_cart.svg);
+  background-image: url(../images/nav_cart.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -358,6 +382,7 @@ body {
   background-color: #FCFCFC;
   border-radius: 4px;
   filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
+  z-index: 3;
 }
 
 .cart-notempty-container {
@@ -473,7 +498,7 @@ body {
 
 .close-button-icon {
   display: block;
-  background-image: url(/images/cart_tooltip_close.svg);
+  background-image: url(../images/cart_tooltip_close.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 10px;
@@ -504,11 +529,14 @@ body {
 
 .pink-button::after {
   content: "";
-  background-image: url(/images/pink_button_ellipse.svg);
+  background-image: url(../images/pink_button_ellipse.svg);
   display: block;
   width: 16px;
   height: 16px;
   display: none;
+  animation-duration: 3s;
+  animation-name: circle;
+  animation-iteration-count: infinite;
 }
 
 /*Состояния на розовой кнопке*/
@@ -556,6 +584,7 @@ body {
   right: 135px;
   top: 55px;
   display: none;
+  z-index: 3;
 }
 
 .navigation-right-item:nth-child(3):hover .login-tooltip-container,
@@ -577,6 +606,12 @@ body {
   border: 1px solid #B9B9B9;
   border-radius: 4px;
   padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
 }
 
 .login-form {
@@ -613,6 +648,7 @@ body {
   right: 240px;
   top: 55px;
   display: none;
+  z-index: 3;
 }
 
 .navigation-right-item:nth-child(2):hover .search-tooltip-container,
@@ -629,6 +665,12 @@ body {
   border: 1px solid #B9B9B9;
   border-radius: 4px;
   padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
 }
 
 /*Тултип на каталоге*/
@@ -643,6 +685,7 @@ body {
   right: 875px;
   top: 55px;
   display: none;
+  z-index: 3;
 }
 
 .navigation-left-item:nth-child(2):hover .catalog-tooltip-container,
@@ -700,11 +743,20 @@ body {
   display: flex;
 }
 
+.popular-product:not(:first-of-type)
+
+/*Скрывает два других слайда*/
+  {
+  display: none;
+}
+
 /*Левая часть hero*/
 
 .popular-product-left-container {
   display: flex;
   flex-direction: column;
+  margin-left: 70px;
+  margin-right: 40px;
 }
 
 .popular-product-title {
@@ -719,6 +771,9 @@ body {
 .popular-product-description {
   margin: 0;
   margin-bottom: 48px;
+  padding-right: 10px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .white-button {
@@ -734,7 +789,45 @@ body {
   text-decoration: none;
   padding: 12px 32px;
   align-self: flex-start;
+}
 
+.white-button::after {
+  content: "";
+  background-image: url(../images/white_button_ellipse.svg);
+  display: block;
+  width: 16px;
+  height: 16px;
+  display: none;
+  animation-duration: 3s;
+  animation-name: circle;
+  animation-iteration-count: infinite;
+}
+
+/*Состояния на белой кнопке*/
+
+.white-button:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  outline: 4px solid #FCFCFC;
+  color: #2D3440;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15);
+}
+
+.white-button:focus-within {
+  background-color: #FCFCFC;
+  outline: 2px solid #2D3440;
+}
+
+.white-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.pink-button:disabled {
+  background-color: #E7E7E7;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: none;
+  color: #B9B9B9;
 }
 
 /*Правая часть hero*/
@@ -742,16 +835,25 @@ body {
 .popular-product-right-container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .popular-product-image-container {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .popular-product-image {
   z-index: 1;
   position: relative;
 }
+
+.current-slide {
+  margin-right: 57px;
+}
+
+
 
 .current-slide::before {
   content: "";
@@ -768,6 +870,10 @@ body {
   opacity: 0.4;
 }
 
+.not-current-slide:not(:last-child) {
+  margin-right: 41px;
+}
+
 .not-current-slide::before {
   content: "";
   display: block;
@@ -777,4 +883,45 @@ body {
   background-color: #FFCBD8;
   position: absolute;
   top: 25px;
+}
+
+/*Кнопки слайдера*/
+
+.slider-button {
+  padding: 0;
+  background: none;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-button:first-of-type {
+  transform: rotate(180deg);
+  position: absolute;
+  left: -18px;
+}
+
+.slider-button:nth-of-type(2) {
+  position: absolute;
+  left: 307px;
+}
+
+/*Состояния на кнопках слайдера*/
+
+.slider-button:hover,
+.slider-button-icon:hover path {
+  background-color: #FCFCFC;
+  fill: #000000;
+}
+
+.slider-button:focus-within .slider-button-icon path,
+{
+  background-color: rgba(252, 252, 252, 0.5);
+  fill: #000000;
+}
+.slider-button:focus-within .slider-button-icon rect:nth-of-type(2) {
+  stroke: none;
 }
