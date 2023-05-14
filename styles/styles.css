@@ -8,14 +8,6 @@
 
 @font-face {
   font-family: "Inter";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/inter-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/inter-700.woff2") format("woff2");
@@ -24,23 +16,7 @@
 
 @font-face {
   font-family: "Inter";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/inter-700.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
   font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/inter-900.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
   font-weight: 900;
   src: url("../fonts/inter-900.woff2") format("woff2");
   font-display: swap;
@@ -60,13 +36,12 @@
   }
 }
 
-@keyframes tooltip-open {
+@keyframes opacity-tooltip {
   from {
-    height: 0;
+    opacity: 0
   }
-
   to {
-    height: 100%;
+    opacity: 1
   }
 }
 
@@ -74,6 +49,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --blue-body: #69A9FF;
+  --orange-body: #FCC850;
+  --pink-body: #FEAFC3;
 }
 
 html {
@@ -109,15 +90,15 @@ body {
 }
 
 .blue-body {
-  background-color: #69A9FF;
+  background-color: var(--blue-body);
 }
 
 .orange-body {
-  background-color: #FCC850;
+  background-color: var(--orange-body);
 }
 
 .pink-body {
-  background-color: #FEAFC3;
+  background-color: var(--pink-body);
 }
 
 .page-header {
@@ -174,6 +155,8 @@ body {
   align-items: center;
   gap: 6px;
 }
+
+
 
 /*Ссылки активны*/
 
@@ -362,6 +345,12 @@ body {
 
 /*Для телефона состояния*/
 
+.navigation-phone {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .navigation-phone:hover {
   background-color: #FF4A78;
   border-radius: 30px;
@@ -402,6 +391,8 @@ body {
 .navigation-right-item:nth-child(4):hover .cart-notempty-container,
 .navigation-right-item:nth-child(4):focus-within .cart-notempty-container {
   display: block;
+  animation-name: opacity-tooltip;
+  animation-duration: 0.5s;
 }
 
 .cart-notempty-container .cart-tooltip-field {
@@ -489,7 +480,7 @@ body {
 }
 
 .cart-tooltip-close-button {
-  padding: 3px;
+  padding: 6px;
   border: none;
   background-color: inherit;
   cursor: pointer;
@@ -589,6 +580,8 @@ body {
 .navigation-right-item:nth-child(3):hover .login-tooltip-container,
 .navigation-right-item:nth-child(3):focus-within .login-tooltip-container {
   display: block;
+  animation-name: opacity-tooltip;
+  animation-duration: 0.5s;
 }
 
 .login-tooltip-field {
@@ -598,6 +591,9 @@ body {
 .login-tooltip-container-title {
   margin: 0;
   margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .login-input {
@@ -637,6 +633,10 @@ body {
   color: inherit;
 }
 
+.login-tooltip-bottom-button {
+  border: none;
+}
+
 /*Тултип на поиске*/
 
 .search-tooltip-container {
@@ -653,6 +653,8 @@ body {
 .navigation-right-item:nth-child(2):hover .search-tooltip-container,
 .navigation-right-item:nth-child(2):focus-within .search-tooltip-container {
   display: block;
+  animation-name: opacity-tooltip;
+  animation-duration: 0.5s;
 }
 
 .search-tooltip-field {
@@ -683,15 +685,15 @@ body {
   top: 55px;
   display: none;
   z-index: 3;
+  padding: 16px;
 }
 
 .navigation-left-item:nth-child(2):hover .catalog-tooltip-container,
 .navigation-left-item:nth-child(2):focus-within .catalog-tooltip-container {
   display: block;
-}
+  animation-name: opacity-tooltip;
+  animation-duration: 0.5s;
 
-.catalog-tooltip-field {
-  padding: 16px;
 }
 
 .catalog-tooltip-field-list {
@@ -711,14 +713,16 @@ body {
   text-align: start;
 }
 
-.catalog-tooltip-field-item:first-child {
+.catalog-tooltip-field-title {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   border-bottom: 1px solid #B9B9B9;
   padding-bottom: 10px;
 
 }
 
-.catalog-tooltip-field-item:nth-child(2) {
+.catalog-tooltip-field-item:first-child {
   padding-top: 10px;
 }
 
@@ -1040,9 +1044,13 @@ body {
 
 /* Подарки */
 
-.gifts-container {
+.gifts-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .gifts-title {
@@ -1052,7 +1060,7 @@ body {
   text-align: center;
 }
 
-.gift-product {
+.gift-item {
   background-color: #FF7799;
   border-radius: 16px;
   padding: 36px;
@@ -1063,7 +1071,7 @@ body {
   width: 570px;
 }
 
-.gift-product:first-of-type::after {
+.gift-raspberries::after {
   content: "";
   display: block;
   background-image: url(/images/gift_raspberries.png);
@@ -1071,10 +1079,10 @@ body {
   height: 268px;
   position: absolute;
   right: 5px;
-  top: 0;
+  bottom: 0;
 }
 
-.gift-product:nth-of-type(2)::after {
+.gift-marchmellow::after {
   content: "";
   display: block;
   background-image: url(/images/gift_marchmellow.png);
@@ -1082,18 +1090,20 @@ body {
   height: 268px;
   position: absolute;
   right: 5px;
-  top: 0;
+  bottom: 0;
 }
 
-.gifts-container-title {
+.gift-item-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   margin: 0;
 }
 
-.gifts-container-description {
+.gift-item-description {
   line-height: 22px;
   margin: 0;
   width: 304px;
 }
+
+/* Самые популярные товары */

@@ -10,6 +10,7 @@
   </head>
 
   <body class="pink-body blue-body orange-body">
+    <h1 class="visually-hidden">Интернет-магазин мороженного "GllacyShop"</h1>
     <header class="page-header">
       <nav class="navigation">
         <ul class="navigation-left-list">
@@ -29,26 +30,22 @@
           <li class="navigation-left-item"><a class="navigation-left-link active-left-link notactive-left-link"
               href="catalog.html">Каталог</a>
             <div class="catalog-tooltip-container">
-              <div class="catalog-tooltip-field">
-                <h3 class="catalog-tooltip-container-title visually-hidden">Каталог</h3>
+              <p class="catalog-tooltip-container-title visually-hidden">Каталог</p>
+                  <p class="catalog-tooltip-field-title" href="#">Новинки</p>
                 <ul class="catalog-tooltip-field-list">
-                  <li class="catalog-tooltip-field-item">
-                    <a class="catalog-tooltip-field-link" href="#">Новинки</a>
-                  </li>
-                  <li class="catalog-tooltip-field-item">
-                    <a class="catalog-tooltip-field-link" href="#">Сливочное</a>
-                  </li>
-                  <li class="catalog-tooltip-field-item">
-                    <a class="catalog-tooltip-field-link" href="#">Щербеты</a>
-                  </li>
-                  <li class="catalog-tooltip-field-item">
-                    <a class="catalog-tooltip-field-link" href="#">Фруктовый лед</a>
-                  </li>
-                  <li class="catalog-tooltip-field-item">
-                    <a class="catalog-tooltip-field-link" href="#">Мелорин</a>
-                  </li>
-                </ul>
-              </div>
+                <li class="catalog-tooltip-field-item">
+                  <a class="catalog-tooltip-field-link" href="#">Сливочное</a>
+                </li>
+                <li class="catalog-tooltip-field-item">
+                  <a class="catalog-tooltip-field-link" href="#">Щербеты</a>
+                </li>
+                <li class="catalog-tooltip-field-item">
+                  <a class="catalog-tooltip-field-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="catalog-tooltip-field-item">
+                  <a class="catalog-tooltip-field-link" href="#">Мелорин</a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="navigation-left-item"><a class="navigation-left-link notactive-left-link" href="#">Доставка и
@@ -56,16 +53,16 @@
           <li class="navigation-left-item"><a class="navigation-left-link notactive-left-link" href="#">О компании</a>
           </li>
         </ul>
-        <ul class="navigation-right-list">
-          <li class="navigation-right-item"><a class="navigation-right-link navigation-phone" href="tel:+78005558628">+7
+        <div class="navigation-right-list">
+          <div class="navigation-right-item"><a class="navigation-right-link navigation-phone" href="tel:+78005558628">+7
               800 555-86-28</a><span class="visually-hidden">+78005558628</span>
-          </li>
-          <li class="navigation-right-item"><a class="navigation-right-link active-right-link notactive-right-link"
+          </div>
+          <div class="navigation-right-item"><a class="navigation-right-link active-right-link notactive-right-link"
               href="#"></a><span class="visually-hidden">Найти</span>
             <div class="search-tooltip-container">
               <div class="search-tooltip-field">
-                <h3 class="search-tooltip-container-title visually-hidden">Найти</h3>
-                <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
+                <p class="search-tooltip-container-title visually-hidden">Найти</p>
+                <form class="search-form" method="post" action="https://echo.htmlacademy.ru/" aria-label="Поиск по сайту">
                   <label class="search-label" for="search">
                     <input class="search-input search-email" type="text" name="search" id="search"
                       placeholder="Поиск по сайту">
@@ -73,23 +70,23 @@
                 </form>
               </div>
             </div>
-          </li>
-          <li class="navigation-right-item"><a class="navigation-right-link active-right-link notactive-right-link"
+          </div>
+          <div class="navigation-right-item"><a class="navigation-right-link active-right-link notactive-right-link"
               href="#">Вход</a>
             <div class="login-tooltip-container">
               <div class="login-tooltip-field">
-                <h3 class="login-tooltip-container-title">Личный кабинет</h3>
-                <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
-                  <label class="login-label" for="email">
+                <p class="login-tooltip-container-title">Личный кабинет</p>
+                <form class="login-form" method="post" action="https://echo.htmlacademy.ru/" aria-label="Вход в личный кабинет">
+                  <label class="login-label" for="email" aria-label="Логин">
                     <input class="login-input login-email" type="email" name="email" id="email"
                       value="email@example.com">
                   </label>
-                  <label class="login-label" for="password">
+                  <label class="login-label" for="password" aria-label="Пароль">
                     <input class="login-input login-password" type="password" name="password" id="password"
                       value="aaaaaa">
                   </label>
                   <div class="login-tooltip-bottom-container">
-                    <a class="login-tooltip-bottom-button pink-button" href="#">Войти</a>
+                    <button class="login-tooltip-bottom-button pink-button" href="#">Войти</button>
                     <div class="login-tooltip-links">
                       <a class="login-tooltip-button-link" href="#">Забыли пароль?</a>
                       <a class="login-tooltip-button-link" href="#">Регистрация</a>
@@ -98,20 +95,20 @@
                 </form>
               </div>
             </div>
-          </li>
-          <li class="navigation-right-item"><a class="navigation-right-link cart-notempty notactive-right-link"
+          </div>
+          <div class="navigation-right-item"><a class="navigation-right-link cart-notempty notactive-right-link"
               href="#">2 товара</a>
             <!--Тултип на корзине (с товарами)-->
             <div class="cart-tooltip-container cart-notempty-container">
               <div class="cart-tooltip-field">
-                <h3 class="cart-tooltip-container-title">Корзина</h3>
+                <p class="cart-tooltip-container-title">Корзина</p>
                 <ul class="cart-tooltip-list">
                   <li class="cart-tooltip-item">
                     <a class="cart-tooltip-link" href="#">
                       <img class="cart-tooltip-image" src="images/cart_tooltip_raspberries.jpg" width="46" height="46"
                         alt="Малинка.">
-                      <p class="cart-tooltip-description">Малинка</p>
-                      <p class="cart-tooltip-description">310 ₽</p>
+                      <span class="cart-tooltip-description">Малинка</span>
+                      <span class="cart-tooltip-description">310 ₽</span>
                     </a>
                     <button class="cart-tooltip-close-button" type="button" aria-label="Закрыть"><span
                         class="close-button-icon"></span></button>
@@ -120,8 +117,8 @@
                     <a class="cart-tooltip-link" href="#">
                       <img class="cart-tooltip-image" src="images/cart_tooltip_bubblegum.jpg" width="46" height="46"
                         alt="Бабл-гам.">
-                      <p class="cart-tooltip-description">Бабл-гам</p>
-                      <p class="cart-tooltip-description">480 ₽</p>
+                      <span class="cart-tooltip-description">Бабл-гам</span>
+                      <span class="cart-tooltip-description">480 ₽</span>
                     </a>
                     <button class="cart-tooltip-close-button" type="button" aria-label="Закрыть"><span
                         class="close-button-icon"></span></button>
@@ -129,26 +126,25 @@
                 </ul>
                 <div class="cart-tooltip-result">
                   <a class="cart-tooltip-result-link pink-button" href="#">Оформить заказ</a>
-                  <p class="cart-tooltip-result-description">Итого: 790 ₽</p>
+                  <span class="cart-tooltip-result-description">Итого: 790 ₽</span>
                 </div>
               </div>
             </div>
-            <!--Тултип на корзине (с товарами)-->
+            <!--Тултип на корзине (без товаров)-->
             <div class="cart-tooltip-container cart-empty-container">
               <div class="cart-tooltip-field">
-                <h3 class="cart-tooltip-container-title">Ваша корзина пока пуста</h3>
+                <p class="cart-tooltip-container-title">Ваша корзина пока пуста</p>
               </div>
             </div>
-          </li>
+          </div>
           <li class="navigation-right-item"><a class="navigation-right-link cart-empty" href="#">Нет товаров</a>
           </li>
-        </ul>
+        </div>
       </nav>
     </header>
     <main class="main-index main-container">
       <div class="page-container">
         <section class="hero">
-          <h1 class="visually-hidden">Интернет-магазин мороженного "GllacyShop"</h1>
           <h2 class="visually-hidden">Популярные товары</h2>
           <section class="popular-product current-product"><!--Первый продукт-->
             <h3 class="visually-hidden">Пломбир с клубничным джемом</h3>
@@ -316,24 +312,27 @@
           </div>
         </section>
         <section class="gifts">
-          <h3 class="visually-hidden">Подарки при заказе мороженного</h3>
+          <h2 class="visually-hidden">Подарки при заказе мороженного</h2>
           <p class="gifts-title">Заказывайте мороженое<br>и получайте подарки!</p>
-          <div class="gifts-container">
-            <section class="gift-product">
-              <h4 class="visually-hidden">Бесплатное малиновое варенье</h4>
-                <p class="gifts-container-title">Малинка даром!</p>
-                <p class="gifts-container-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
-                  банку малинового варенья бесплатно.</p>
-                <a class="gift-container-link white-button" href="#">Хочу подарок</a>
-            </section>
-            <section class="gift-product">
-              <h4 class="visually-hidden">Бесплатное Маршмеллоу</h4>
-                <p class="gifts-container-title">Маршмеллоу даром!</p>
-                <p class="gifts-container-description">При покупке 2 кг пломбира добавим<br>в ваш заказ упаковку нежных
-                  зефирок совершенно бесплатно.</p>
-                <a class="gift-container-link white-button" href="#">Хочу подарок</a>
-            </section>
-          </div>
+          <ul class="gifts-list">
+            <li class="gift-item gift-raspberries">
+              <p class="gift-item-title">Малинка даром!</p>
+              <p class="gift-item-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
+                банку малинового варенья бесплатно.</p>
+              <a class="gift-item-link white-button" href="#">Хочу подарок</a>
+            </li>
+            <li class="gift-item gift-marchmellow">
+              <p class="gift-item-title">Маршмеллоу даром!</p>
+              <p class="gift-item-description">При покупке 2 кг пломбира добавим<br>в ваш заказ упаковку нежных
+                зефирок совершенно бесплатно.</p>
+              <a class="gift-item-link white-button" href="#">Хочу подарок</a>
+            </li>
+          </ul>
+        </section>
+        <section class="most-popular-products">
+          <h2 class="visually-hidden">Подарки при заказе мороженного</h2>
+          <p class="most-popular-products-title">Попробуйте самые популярные вкусы нашего мороженого</p>
+
         </section>
       </div>
     </main>
