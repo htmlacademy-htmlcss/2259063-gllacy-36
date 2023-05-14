@@ -40,6 +40,7 @@
   from {
     opacity: 0
   }
+
   to {
     opacity: 1
   }
@@ -156,6 +157,10 @@ body {
   gap: 6px;
 }
 
+.navigation-left-item:not(:first-child) {
+  padding: 10px 0;
+}
+
 
 
 /*Ссылки активны*/
@@ -235,6 +240,10 @@ body {
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
+}
+
+.navigation-right-item {
+  padding: 10px 0;
 }
 
 .navigation-right-item:not(:first-child) .notactive-right-link {
@@ -325,15 +334,23 @@ body {
   background-color: #FCFCFC;
 }
 
-.navigation-right-item:nth-child(5)
-
 /*Когда нет товаров*/
-  {
+
+.cart-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+/* Скрывает пустую корзину */
+.cart-list .navigation-right-item:nth-child(2) {
   display: none;
 }
 
-.navigation-right-item:nth-child(4) .cart-notempty::before,
-.navigation-right-item:nth-child(5) .cart-empty::before {
+.cart-list .navigation-right-item:nth-child(1) .cart-notempty::before,
+.cart-list .navigation-right-item:nth-child(2) .cart-empty::before {
   content: "";
   display: block;
   background-image: url(../images/nav_cart.svg);
@@ -341,6 +358,43 @@ body {
   background-position: center;
   width: 16px;
   height: 16px;
+}
+
+.navigation-right-item:not(:first-child) .notactive-right-link {
+  background-color: rgba(252, 252, 252, 0.3);
+  opacity: 1;
+  color: inherit
+}
+
+
+.navigation-right-item:nth-child(2) .notactive-right-link {
+  background-image: url(../images/nav_glass.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 27px;
+}
+
+/* Состояния для корзины */
+
+.cart-list .navigation-right-item {
+  background-color: rgba(252, 252, 252, 0.3);
+  opacity: 1;
+  color: inherit;
+  border-radius: 30px;
+}
+
+.cart-list .navigation-right-item:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.cart-list .navigation-right-item:focus-within {
+  outline: 2px solid #2D3440;
+}
+
+.cart-list .navigation-right-item:active {
+  background-color: #FCFCFC;
 }
 
 /*Для телефона состояния*/
@@ -388,8 +442,15 @@ body {
   right: 0;
 }
 
-.navigation-right-item:nth-child(4):hover .cart-notempty-container,
-.navigation-right-item:nth-child(4):focus-within .cart-notempty-container {
+.cart-list .navigation-right-item:nth-child(1):hover .cart-notempty-container,
+.cart-list .navigation-right-item:nth-child(1):focus-within .cart-notempty-container {
+  display: block;
+  animation-name: opacity-tooltip;
+  animation-duration: 0.5s;
+}
+
+.cart-list .navigation-right-item:nth-child(2):hover .cart-empty-container,
+.cart-list .navigation-right-item:nth-child(2):focus-within .cart-empty-container {
   display: block;
   animation-name: opacity-tooltip;
   animation-duration: 0.5s;
