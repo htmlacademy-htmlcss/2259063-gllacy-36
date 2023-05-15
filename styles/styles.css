@@ -1105,6 +1105,10 @@ body {
 
 /* Подарки */
 
+.gifts {
+  margin-bottom: 80px;
+}
+
 .gifts-list {
   display: flex;
   flex-wrap: wrap;
@@ -1119,6 +1123,8 @@ body {
   font-size: 32px;
   line-height: 46px;
   text-align: center;
+  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .gift-item {
@@ -1168,3 +1174,94 @@ body {
 }
 
 /* Самые популярные товары */
+
+.most-popular-products-title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  margin: 0 auto;
+  width: 527px;
+  margin-bottom: 56px;
+}
+
+.most-popular-products-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.most-popular-products-item {
+  border-radius: 8px;
+  width: 270px;
+  position: relative;
+}
+
+.most-popular-products-item::before {
+  content: "";
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  width: 270px;
+  height: 85%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.most-popular-products-container {
+  padding: 0 40px 24px 40px;
+}
+
+.most-popular-products-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.most-popular-products-description {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #565C66;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.most-popular-products-price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.most-popular-products-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.most-popular-products-cart-button {
+  border-radius: 50%;
+  background-color: #FF2F64;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.raspberries::before {
+  content: "";
+  background-image: url(/images/products_raspberries.png);
+  display: block;
+  width: 270px;
+  height: 184px;
+}
