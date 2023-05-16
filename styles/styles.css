@@ -797,13 +797,12 @@ body {
 .page-container {
   width: 1170px;
   margin: 0 98px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 /*HERO*/
-
-.hero {
-  margin-bottom: 80px;
-}
 
 .popular-product {
   display: flex;
@@ -1105,10 +1104,6 @@ body {
 
 /* Подарки */
 
-.gifts {
-  margin-bottom: 80px;
-}
-
 .gifts-list {
   display: flex;
   flex-wrap: wrap;
@@ -1256,6 +1251,7 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
 }
 
 .raspberries::before {
@@ -1264,4 +1260,170 @@ body {
   display: block;
   width: 270px;
   height: 184px;
+}
+
+.pistachio::before {
+  content: "";
+  background-image: url(/images/products_pistachio.png);
+  display: block;
+  width: 270px;
+  height: 184px;
+}
+
+.blueberry::before {
+  content: "";
+  background-image: url(/images/products_blueberry.png);
+  display: block;
+  width: 270px;
+  height: 184px;
+}
+
+.bubblegum::before {
+  content: "";
+  background-image: url(/images/products_bubble_gum.png);
+  display: block;
+  width: 270px;
+  height: 184px;
+}
+
+/* Преимущества */
+
+.advantages {
+  background-image: url(/images/advantages_background.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-container {
+  width: 1122px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin: 24px;
+}
+
+.advantages-title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  margin: 0;
+  margin-top: 56px;
+}
+
+.advantages-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 56px 40px;
+}
+
+.advantages-item {
+  width: 505px;
+  text-align: left;
+}
+
+.advantages-description {
+  line-height: 22px;
+  color: #565C66;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.icecream-description::before {
+  content: "";
+  background-image: url(/images/advantages_icecream.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 138px;
+  height: 48px;
+}
+
+.natural-description::before {
+  content: "";
+  background-image: url(/images/advantages_natural.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.eco-description::before {
+  content: "";
+  background-image: url(/images/advantages_eco.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 98px;
+  height: 48px;
+}
+
+.delivery-description::before {
+  content: "";
+  background-image: url(/images/advantages_delivery.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 138px;
+  height: 48px;
+}
+
+/* Article */
+
+.index-article {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+/* Состояния на инпутах */
+
+.input-field::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: #B9B9B9;
+}
+
+.input-field:disabled {
+  background-color: #E7E7E7;
+}
+
+.input-field:hover {
+  border: 1px solid #2D3440;
+}
+
+.input-field:focus {
+  border: 2px solid #2D3440;
+}
+
+.search-input:not(:placeholder-shown) {
+  border: 1px solid #EA5454;
+}
+
+.search-input:not(:placeholder-shown):hover {
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.login-email:invalid {
+  border: 1px solid #EA5454;
+}
+
+.login-email:invalid:hover:not(:placeholder-shown) {
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.login-password:invalid {
+  border: 1px solid #EA5454;
+}
+
+.login-password:invalid:hover:not(:placeholder-shown) {
+  box-shadow: inset 0 0 0 1px red;
 }
