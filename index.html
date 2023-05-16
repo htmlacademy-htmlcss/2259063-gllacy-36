@@ -66,7 +66,7 @@
                 <form class="search-form" method="post" action="https://echo.htmlacademy.ru/"
                   aria-label="Поиск по сайту">
                   <label class="search-label" for="search">
-                    <input class="search-input search-email" type="text" name="search" id="search"
+                    <input class="search-input search-email input-field" type="text" name="search" id="search"
                       placeholder="Поиск по сайту">
                   </label>
                 </form>
@@ -81,12 +81,12 @@
                 <form class="login-form" method="post" action="https://echo.htmlacademy.ru/"
                   aria-label="Вход в личный кабинет">
                   <label class="login-label" for="email" aria-label="Логин">
-                    <input class="login-input login-email" type="email" name="email" id="email"
-                      value="email@example.com">
+                    <input class="login-input login-email input-field" type="email" name="email" id="email"
+                      value="email@example.com" required>
                   </label>
                   <label class="login-label" for="password" aria-label="Пароль">
-                    <input class="login-input login-password" type="password" name="password" id="password"
-                      value="aaaaaa">
+                    <input class="login-input login-password input-field" type="password" name="password" id="password"
+                      value="aaaaaa" required>
                   </label>
                   <div class="login-tooltip-bottom-container">
                     <button class="login-tooltip-bottom-button pink-button" href="#">Войти</button>
@@ -356,11 +356,11 @@
               </div>
             </li>
             <li class="most-popular-products-item">
-              <p class="most-popular-products-name raspberries">Малинка</p>
+              <p class="most-popular-products-name pistachio">Фисташка</p>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочное мороженое с малиновым джемом</p>
+                <p class="most-popular-products-description">Фисташковый пломбир с кусочками шоколада</p>
                 <div class="most-popular-products-bottom-container">
-                  <span class="most-popular-products-price">310 ₽/кг</span>
+                  <span class="most-popular-products-price">340 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button"><svg class="cart-icon"
                       aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                       fill="none" viewBox="0 0 15 14">
@@ -373,11 +373,11 @@
               </div>
             </li>
             <li class="most-popular-products-item">
-              <p class="most-popular-products-name raspberries">Малинка</p>
+              <p class="most-popular-products-name blueberry">Черника</p>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочное мороженое с малиновым джемом</p>
+                <p class="most-popular-products-description">Крем-брюле с черничным джемом</p>
                 <div class="most-popular-products-bottom-container">
-                  <span class="most-popular-products-price">310 ₽/кг</span>
+                  <span class="most-popular-products-price">330 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button"><svg class="cart-icon"
                       aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                       fill="none" viewBox="0 0 15 14">
@@ -390,11 +390,11 @@
               </div>
             </li>
             <li class="most-popular-products-item">
-              <p class="most-popular-products-name raspberries">Малинка</p>
+              <p class="most-popular-products-name bubblegum">Бабл-гам</p>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочное мороженое с малиновым джемом</p>
+                <p class="most-popular-products-description">Ванильный пломбир со сладкой посыпкой</p>
                 <div class="most-popular-products-bottom-container">
-                  <span class="most-popular-products-price">310 ₽/кг</span>
+                  <span class="most-popular-products-price">320 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button"><svg class="cart-icon"
                       aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                       fill="none" viewBox="0 0 15 14">
@@ -407,8 +407,36 @@
               </div>
             </li>
           </ul>
-
         </section>
+        <section class="advantages">
+          <h2 class="visually-hidden">Наши особенности</h2>
+          <div class="advantages-container">
+            <p class="advantages-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного
+              производства на развес</p>
+            <ul class="advantages-list">
+              <li class="advantages-item">
+                <p class="advantages-description icecream-description">Всё наше мороженое изготавливается на собственном
+                  производстве с использованием современного оборудования и проверенных временем технологий.</p>
+              </li>
+              <li class="advantages-item">
+                <p class="advantages-description natural-description">Закупка ингредиентов производится только<br>у
+                  проверенных фермерских хозяйств, с которыми<br>нас связывает долговременное сотрудничество.</p>
+              </li>
+              <li class="advantages-item">
+                <p class="advantages-description eco-description">Для приготовления мороженого используются сливки и
+                  молоко высочайшего качества. Все ингредиенты<br>и добавки произведены из натурального сырья.</p>
+              </li>
+              <li class="advantages-item">
+                <p class="advantages-description delivery-description">Доставка нашего мороженого осуществляется в
+                  специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <article class="index-article">
+
+        </article>
       </div>
     </main>
 
