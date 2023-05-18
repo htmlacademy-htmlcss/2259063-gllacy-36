@@ -334,23 +334,17 @@ body {
   background-color: #FCFCFC;
 }
 
-/*Когда нет товаров*/
-
-.cart-list {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  gap: 16px;
-}
-
 /* Скрывает пустую корзину */
-.cart-list .navigation-right-item:nth-child(2) {
+.cart-empty {
   display: none;
 }
 
-.cart-list .navigation-right-item:nth-child(1) .cart-notempty::before,
-.cart-list .navigation-right-item:nth-child(2) .cart-empty::before {
+.cart-list .navigation-right-item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-right-item:nth-child(4) .navigation-right-link::before {
   content: "";
   display: block;
   background-image: url(../images/nav_cart.svg);
@@ -374,27 +368,6 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 27px;
-}
-
-/* Состояния для корзины */
-
-.cart-list .navigation-right-item {
-  background-color: rgba(252, 252, 252, 0.3);
-  opacity: 1;
-  color: inherit;
-  border-radius: 30px;
-}
-
-.cart-list .navigation-right-item:hover {
-  background-color: rgba(252, 252, 252, 0.5);
-}
-
-.cart-list .navigation-right-item:focus-within {
-  outline: 2px solid #2D3440;
-}
-
-.cart-list .navigation-right-item:active {
-  background-color: #FCFCFC;
 }
 
 /*Для телефона состояния*/
@@ -428,6 +401,8 @@ body {
   z-index: 3;
 }
 
+
+/* Блок с непустым контейнером */
 .cart-notempty-container {
   display: none;
   min-width: 441px;
@@ -435,6 +410,7 @@ body {
   top: 55px;
 }
 
+/* Блок с пустым контейнером */
 .cart-empty-container {
   display: none;
   width: 288px;
@@ -442,16 +418,19 @@ body {
   right: 0;
 }
 
-.cart-list .navigation-right-item:nth-child(1):hover .cart-notempty-container,
-.cart-list .navigation-right-item:nth-child(1):focus-within .cart-notempty-container {
+/* Показывает непустую корзину*/
+.navigation-right-item:nth-child(4):hover .cart-notempty-container,
+.navigation-right-item:nth-child(4):focus-within .cart-notempty-container {
   display: block;
   animation-name: opacity-tooltip;
   animation-duration: 0.5s;
 }
 
-.cart-list .navigation-right-item:nth-child(2):hover .cart-empty-container,
-.cart-list .navigation-right-item:nth-child(2):focus-within .cart-empty-container {
-  display: block;
+/* Показывает пустую корзину
+При необходимости показать - заменить на display: block */
+.navigation-right-item:nth-child(4):hover .cart-empty-container,
+.navigation-right-item:nth-child(4):focus-within .cart-empty-container {
+  display: none;
   animation-name: opacity-tooltip;
   animation-duration: 0.5s;
 }
@@ -567,6 +546,8 @@ body {
   display: flex;
   gap: 9px;
   align-items: center;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
   color: #FCFCFC;
   background-color: #FF2F64;
@@ -1206,6 +1187,18 @@ body {
   bottom: 0;
 }
 
+.most-popular-products-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.most-popular-products-image {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
 .most-popular-products-container {
   padding: 0 40px 24px 40px;
 }
@@ -1217,6 +1210,7 @@ body {
   text-align: center;
   margin: 0;
   margin-bottom: 8px;
+  display: block;
 }
 
 .most-popular-products-description {
@@ -1254,38 +1248,6 @@ body {
   cursor: pointer;
 }
 
-.raspberries::before {
-  content: "";
-  background-image: url(/images/products_raspberries.png);
-  display: block;
-  width: 270px;
-  height: 184px;
-}
-
-.pistachio::before {
-  content: "";
-  background-image: url(/images/products_pistachio.png);
-  display: block;
-  width: 270px;
-  height: 184px;
-}
-
-.blueberry::before {
-  content: "";
-  background-image: url(/images/products_blueberry.png);
-  display: block;
-  width: 270px;
-  height: 184px;
-}
-
-.bubblegum::before {
-  content: "";
-  background-image: url(/images/products_bubble_gum.png);
-  display: block;
-  width: 270px;
-  height: 184px;
-}
-
 /* Преимущества */
 
 .advantages {
@@ -1294,6 +1256,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  border-radius: 16px;
 }
 
 .advantages-container {
@@ -1341,8 +1305,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 138px;
+  width: 48px;
   height: 48px;
+  border-radius: 50%;
+  border: 2px solid #2D3440;
+  flex-shrink: 0;
 }
 
 .natural-description::before {
@@ -1353,6 +1320,9 @@ body {
   display: block;
   width: 48px;
   height: 48px;
+  border-radius: 50%;
+  border: 2px solid #2D3440;
+  flex-shrink: 0;
 }
 
 .eco-description::before {
@@ -1361,8 +1331,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 98px;
+  width: 48px;
   height: 48px;
+  border-radius: 50%;
+  border: 2px solid #2D3440;
+  flex-shrink: 0;
 }
 
 .delivery-description::before {
@@ -1371,17 +1344,184 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 138px;
+  width: 48px;
   height: 48px;
+  border-radius: 50%;
+  border: 2px solid #2D3440;
+  flex-shrink: 0;
 }
 
-/* Article */
+/* Индекс подписка + article про сервировку*/
 
-.index-article {
+.subscribe {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
+
+/* Сервировка */
+
+.serving {
+  background-image: url(/images/article_serving.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  width: 570px;
+}
+
+.serving-aritcle-container {
+  padding: 32px;
+}
+
+.serving-article-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #565C66;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.serving-article-description {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  width: 303px;
+}
+
+/* Подписка */
+
+.subsribe-container {
+  background-image: url(/images/subscribe_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  width: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-container-inner {
+  padding: 26px;
+  background-color: #FFFFFF;
+  margin: 6px;
+}
+
+.subscribe-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.subscribe-input {
+  width: 322px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.subscribe-form {
+  gap: 14px;
+  display: flex;
+}
+
+.subscribe-button {
+  flex-grow: 1;
+  justify-content: center;
+  border: none;
+}
+
+
+/* Footer */
+
+.page-footer {
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.footer-container {
+  width: 1170px;
+  margin: 0 98px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 259px;
+  margin-bottom: 48px;
+}
+
+/* Посередине футера */
+
+.footer-container-inner-middle {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-menu-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-menu-list:first-child .footer-menu-item:first-child {
+  font-weight: 700;
+  position: relative;
+}
+
+.footer-menu-list:first-child .footer-menu-item:first-child .footer-menu-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu-list:first-child .footer-menu-item:first-child .footer-menu-link::before {
+  content: "";
+  background-image: url(/images/footer_heart.svg);
+  width: 14px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  left: -20px;
+}
+
+/* Правый край футера с логотипом */
+
+.footer-container-inner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.academy-description {
+  font-size: 12px;
+  line-height: 16px;
+  color: #2D3440;
+}
+
+.academy-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
 
 
 /* Состояния на инпутах */
@@ -1416,7 +1556,12 @@ body {
   border: 1px solid #EA5454;
 }
 
-.login-email:invalid:hover:not(:placeholder-shown) {
+.subscribe-email:not(:placeholder-shown) {
+  border: 1px solid #EA5454;
+}
+
+.login-email:invalid:hover:not(:placeholder-shown),
+.subscribe-email:invalid:hover:not(:placeholder-shown) {
   box-shadow: inset 0 0 0 1px red;
 }
 
