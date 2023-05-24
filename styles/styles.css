@@ -1634,6 +1634,31 @@ body {
   left: 10px;
 }
 
+/* Обратная связь */
+
+.feedback {
+  background-image: url(/images/feedback_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.feedback-container {
+  margin: 64px;
+  background-color: #FCFCFC;
+  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+  width: 343px;
+}
+
+.feedback-container-inner {
+  padding: 40px;
+}
+
+.feedback-button {
+  border: none;
+}
+
 
 
 
