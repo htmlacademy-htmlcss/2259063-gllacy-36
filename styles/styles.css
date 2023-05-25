@@ -104,7 +104,7 @@ body {
 
 .page-header {
   margin: 0 auto;
-  padding: 24px 0;
+  padding: 22px 0;
 
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 .navigation-right-list {
-  gap: 16px;
+  gap: 18px;
 }
 
 .navigation-logo-link {
@@ -149,7 +149,13 @@ body {
 
 .navigation-left-link {
   padding: 8px 16px;
+  font-size: 16px;
+  line-height: 20px;
 }
+
+
+
+
 
 .navigation-left-item:nth-child(2) .navigation-left-link {
   display: flex;
@@ -159,6 +165,10 @@ body {
 
 .navigation-left-item:not(:first-child) {
   padding: 10px 0;
+}
+
+.navigation-left-item:first-child {
+  margin-right: 15px;
 }
 
 
@@ -235,11 +245,13 @@ body {
 
 /*Правая часть*/
 
-.navigation-right-link {
+.navigation-right-item:not(:first-child) .navigation-right-link {
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .navigation-right-item {
@@ -376,19 +388,50 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  position: relative;
+  display: block;
 }
 
-.navigation-phone:hover {
-  background-color: #FF4A78;
-  border-radius: 30px;
-  color: #FFFFFF;
-  transition: 0.5s ease-in-out;
+.navigation-phone:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #2D3440;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: none;
+}
+
+.navigation-phone::before {
+  content: "";
+  width: 110%;
+  height: 110%;
+  border-radius: 16px;
+  background-color: #E7E7E7;
+  position: absolute;
+  left: -7px;
+  z-index: -1;
+  top: -2px;
+  display: none;
+}
+
+.navigation-phone:hover::after {
+  display: block;
+}
+
+.navigation-phone:focus-within::before {
+  display: block;
+
+}
+
+.navigation-phone:focus-within {
+  border: none;
+  outline: none;
 }
 
 .navigation-phone:active {
-  background-color: #FEAFC3;
-  transform: scale(1.2);
-  transition: 0.2s ease-in-out;
+  opacity: 0.5;
 }
 
 /*Тултип на корзине*/
@@ -765,7 +808,7 @@ body {
 }
 
 .catalog-tooltip-field-item:first-child {
-  padding-top: 10px;
+  padding-top: 18px;
 }
 
 /*MAIN*/
@@ -1056,6 +1099,9 @@ body {
 
 .social-link {
   border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .social-link:hover .social-icon {
@@ -1117,7 +1163,7 @@ body {
 .gift-raspberries::after {
   content: "";
   display: block;
-  background-image: url(/images/gift_raspberries.png);
+  background-image: url(../images/gift_raspberries.png);
   width: 219px;
   height: 268px;
   position: absolute;
@@ -1128,7 +1174,7 @@ body {
 .gift-marchmellow::after {
   content: "";
   display: block;
-  background-image: url(/images/gift_marchmellow.png);
+  background-image: url(../images/gift_marchmellow.png);
   width: 219px;
   height: 268px;
   position: absolute;
@@ -1248,10 +1294,44 @@ body {
   cursor: pointer;
 }
 
+/* Псевдосостояния на кнопке корзины в карточке */
+
+.most-popular-products-cart-button:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FF2F64;
+}
+
+.most-popular-products-cart-button:hover .cart-icon path {
+  fill: #2D3440;
+}
+
+.most-popular-products-cart-button:focus {
+  background-color: #FF2F64;
+  border: 2px solid #2D3440;
+}
+
+.most-popular-products-cart-button:hover .cart-icon path {
+  fill: currentColor
+}
+
+.most-popular-products-cart-button:active {
+  background-color: #FFCBD8;
+  border: 2px solid #FF2F64;
+}
+
+.most-popular-products-cart-button:disabled {
+  background-color: #B9B9B9;
+  border: none;
+}
+
+.most-popular-products-cart-button:disabled .cart-icon path {
+  fill: #565C66;
+}
+
 /* Преимущества */
 
 .advantages {
-  background-image: url(/images/advantages_background.png);
+  background-image: url(../images/advantages_background.png);
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -1301,7 +1381,7 @@ body {
 
 .icecream-description::before {
   content: "";
-  background-image: url(/images/advantages_icecream.svg);
+  background-image: url(../images/advantages_icecream.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -1314,7 +1394,7 @@ body {
 
 .natural-description::before {
   content: "";
-  background-image: url(/images/advantages_natural.svg);
+  background-image: url(../images/advantages_natural.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -1327,7 +1407,7 @@ body {
 
 .eco-description::before {
   content: "";
-  background-image: url(/images/advantages_eco.svg);
+  background-image: url(../images/advantages_eco.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -1340,7 +1420,7 @@ body {
 
 .delivery-description-advantages::before {
   content: "";
-  background-image: url(/images/advantages_delivery.svg);
+  background-image: url(../images/advantages_delivery.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -1362,7 +1442,7 @@ body {
 /* Сервировка */
 
 .serving {
-  background-image: url(/images/article_serving.jpg);
+  background-image: url(../images/article_serving.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1392,7 +1472,7 @@ body {
 /* Подписка */
 
 .subsribe-container {
-  background-image: url(/images/subscribe_background.jpg);
+  background-image: url(../images/subscribe_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1467,7 +1547,7 @@ body {
 /* ДОСТАВКА */
 
 .delivery {
-  background-image: url(/images/delivery_background.jpg);
+  background-image: url(../images/delivery_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1493,7 +1573,7 @@ body {
 
 .delivery-form-container {
   background: #FCFCFC;
-  box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   width: 500px;
 }
@@ -1550,7 +1630,7 @@ body {
 
 .delivery-form .deivery-field-group:nth-of-type(odd) .delivery-form-label::after {
   content: "";
-  background-image: url(/images/form_info.svg);
+  background-image: url(../images/form_info.svg);
   width: 13px;
   height: 13px;
   display: block;
@@ -1583,7 +1663,7 @@ body {
   width: 169px;
   background-color: #FFFFFF;
   border: 1px solid #B9B9B9;
-  box-shadow: 0px 4px 8px rgba(194, 194, 194, 0.2);
+  box-shadow: 0 4px 8px rgba(194, 194, 194, 0.2);
   position: absolute;
   right: -36px;
   top: 40px;
@@ -1601,6 +1681,7 @@ body {
 
 .tooltip-information-container {
   right: 10px;
+  display: none;
 }
 
 .tooltip-information-triangle {
@@ -1634,10 +1715,16 @@ body {
   left: 10px;
 }
 
+/* Появление тултипов */
+
+.delivery-form-label-tooltip-active:hover .tooltip-information-container {
+  display: block;
+}
+
 /* Обратная связь */
 
 .feedback {
-  background-image: url(/images/feedback_background.jpg);
+  background-image: url(../images/feedback_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1646,7 +1733,7 @@ body {
 .feedback-container {
   margin: 64px;
   background-color: #FCFCFC;
-  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   width: 343px;
 }
@@ -1655,18 +1742,46 @@ body {
   padding: 40px;
 }
 
+.feedback-adress-title,
+.feedback-delivery-title {
+  line-height: 22px;
+  color: #565C66;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.feedback-adress-description,
+.feedback-delivery-telephone {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.feedback-adress-description {
+  margin-bottom: 24px;
+}
+
+.feedback-delivery-telephone {
+  text-decoration: none;
+  color: inherit;
+}
+
+.feedback-delivery-description-explanations {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #565C66;
+  margin-bottom: 32px;
+}
+
+
 .feedback-button {
   border: none;
 }
 
 
-
-
-
-
-
-
-/* Footer */
+/* ФУТЕР */
 
 .page-footer {
   margin: 0 auto;
@@ -1690,11 +1805,21 @@ body {
   gap: 24px;
 }
 
-.footer-menu-list {
+/* .footer-menu-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+} */
+
+.footer-menu-list {
+  list-style-type: none;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1705,27 +1830,61 @@ body {
   color: inherit;
   font-size: 14px;
   line-height: 20px;
+  padding: 4px;
+  position: relative;
+  border-radius: 6px;
 }
 
-.footer-menu-list:first-child .footer-menu-item:first-child {
-  font-weight: 700;
+.footer-menu-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #2D3440;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: none;
+}
+
+.footer-menu-item:nth-child(odd) {
+  margin-right: 12px;
+}
+
+.footer-menu-item:first-child {
   position: relative;
 }
 
-.footer-menu-list:first-child .footer-menu-item:first-child .footer-menu-link {
-  display: flex;
-  align-items: center;
+.like-link {
+  font-weight: 700;
 }
 
-.footer-menu-list:first-child .footer-menu-item:first-child .footer-menu-link::before {
+.like-link::before {
   content: "";
-  background-image: url(/images/footer_heart.svg);
+  background-image: url(../images/footer_heart.svg);
   width: 14px;
-  height: 12px;
+  height: 13px;
   display: block;
   position: absolute;
   left: -20px;
+  top: 5px;
 }
+
+/* Псевдосостояния на ссылках в футере посередине */
+
+.footer-menu-link:hover::after {
+  display: block;
+}
+
+.footer-menu-link:focus-within {
+  background-color: #E7E7E7;
+  border: none;
+  outline: none;
+}
+
+.footer-menu-link:active {
+  opacity: 0.5;
+}
+
 
 /* Правый край футера с логотипом */
 
@@ -1745,7 +1904,38 @@ body {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
 }
+
+.academy-logo-link {
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* Псевдосостояня на ссылках правой части футера */
+
+.academy-logo-link:hover,
+.academy-link:hover {
+  opacity: 0.6;
+}
+
+.academy-logo-link:focus-within,
+.academy-link:focus-within {
+  background-color: #E7E7E7;
+  border: none;
+  outline: none;
+}
+
+.academy-logo-link:active .academy-icon path {
+  fill: #565C66;
+}
+
+.academy-link:active {
+  opacity: 0.2;
+}
+
+
 
 /* Состояния на ссылках футера - НЕ ЗАБУДЬ */
 
