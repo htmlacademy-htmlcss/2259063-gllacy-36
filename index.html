@@ -696,6 +696,35 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal-closed">
+      <div class="modal-container">
+        <section class="modal-feedback">
+          <button class="modal-feedback-close-button" type="button" aria-label="Закрыть">
+            <span class="modal-close-button-icon"></span>
+          </button>
+          <span class="visually-hidden">Закрыть.</span>
+          <h2 class="modal-feedback-title">Мы обязательно ответим вам!</h2>
+          <form class="modal-feedback-form" method="post" action="https://echo.htmlacademy.ru/">
+            <label class="modal-form-label" for="feedback-name"><span class="visually-hidden">Ваше имя</span>
+              <input class="modal-feedback-name input-field" type="text" id="feedback-name" name="feedback-name"
+                placeholder="Имя и фамилия" required>
+            </label>
+            <label class="modal-form-label" for="feedback-email"><span class="visually-hidden">Ваша электронная
+                почта</span>
+              <input class="modal-feedback-email input-field" type="email" id="feedback-email" name="feedback-email"
+                placeholder="email@example.com" required>
+            </label>
+            <label class="modal-form-label" for="feedback-comment"><span class="visually-hidden">Ваши
+                пожелания</span>
+              <textarea class="modal-feedback-comment input-field" rows="6" id="feedback-comment"
+                name="feedback-comment" placeholder="В свободной форме"></textarea>
+            </label>
+            <button type="button" class="modal-feedback-form-button pink-button">Отправить</button>
+          </form>
+          </button>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>

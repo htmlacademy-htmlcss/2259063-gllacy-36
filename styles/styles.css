@@ -2125,6 +2125,117 @@ body {
   opacity: 0.2;
 }
 
+
+/* Модальное окно */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 52, 64, 0.3);
+  z-index: 2;
+}
+
+.modal-closed {
+  /* display: none; Показать/спрятать модалку */
+}
+
+.modal-container {
+  position: relative;
+  margin: auto;
+  padding: 64px;
+  width: 570px;
+  background-color: #FCFCFC;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.modal-feedback-close-button {
+  position: absolute
+}
+
+.modal-feedback-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.modal-feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-feedback-form .input-field {
+  width: 442px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+}
+
+.modal-form-label:nth-of-type(3) .input-field::-webkit-resizer {
+  background-color: #FCFCFC;
+  /* border-right: 1px solid #B9B9B9;
+  border-bottom: 1px solid #B9B9B9;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none; */
+}
+
+.modal-feedback-form-button {
+  border: none;
+  align-self: flex-end;
+  margin-top: 24px;
+}
+
+.modal-feedback-close-button {
+  padding: 6px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+  right: 30px;
+  top: 30px;
+}
+
+.modal-close-button-icon {
+  display: block;
+  background-image: url(../images/modal_close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+}
+
+/* Псевдосостояния .modal-feedback-close-button */
+
+.modal-feedback-close-button:hover {
+  opacity: 0.7;
+}
+
+.modal-feedback-close-button:focus {
+  background-color: #FEAFC3;
+}
+
+.modal-feedback-close-button:active .modal-close-button-icon {
+  transform: scale(1.1);
+  transition: .2s;
+}
+
+/**/
+
 /* Состояния на инпутах */
 
 .input-field::placeholder {
@@ -2153,7 +2264,8 @@ body {
   box-shadow: inset 0 0 0 1px red;
 }
 
-.login-email:invalid {
+.login-email:invalid,
+.modal-feedback-email:invalid {
   border: 1px solid #EA5454;
 }
 
@@ -2162,7 +2274,8 @@ body {
 }
 
 .login-email:invalid:hover:not(:placeholder-shown),
-.subscribe-email:invalid:hover:not(:placeholder-shown) {
+.subscribe-email:invalid:hover:not(:placeholder-shown),
+.modal-feedback-email:hover:not(:placeholder-shown) {
   box-shadow: inset 0 0 0 1px red;
 }
 
