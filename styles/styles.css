@@ -1771,7 +1771,7 @@ body {
   line-height: 20px;
 }
 
-.deivery-field-group {
+.delivery-field-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1790,15 +1790,15 @@ body {
   color: #2D3440;
 }
 
-.delivery-form .deivery-field-group:first-of-type .delivery-input {
+.delivery-form .delivery-field-group:first-of-type .delivery-input {
   width: 117px;
 }
 
-.delivery-form .deivery-field-group:nth-of-type(2) .delivery-input {
+.delivery-form .delivery-field-group:nth-of-type(2) .delivery-input {
   width: 287px;
 }
 
-.delivery-form .deivery-field-group:nth-of-type(3) .delivery-input {
+.delivery-form .delivery-field-group:nth-of-type(3) .delivery-input {
   width: 420px;
 }
 
@@ -1808,7 +1808,7 @@ body {
   align-items: center;
 }
 
-.delivery-form .deivery-field-group:nth-of-type(odd) .delivery-form-label::after {
+.delivery-form .delivery-field-group:nth-of-type(odd) .delivery-form-label::after {
   content: "";
   background-image: url(../images/form_info.svg);
   width: 13px;
@@ -1831,12 +1831,12 @@ body {
   cursor: pointer;
 }
 
-.deivery-field-group:first-of-type .delivery-form-label-tooltip-active {
+.delivery-field-group:first-of-type .delivery-form-label-tooltip-active {
   left: 42px;
   top: 3px;
 }
 
-.deivery-field-group:nth-of-type(3) .delivery-form-label-tooltip-active {
+.delivery-field-group:nth-of-type(3) .delivery-form-label-tooltip-active {
   left: 55px;
   top: 3px;
 }
@@ -1889,12 +1889,12 @@ body {
 }
 
 
-.deivery-field-group:nth-of-type(odd) .tooltip-information-field {
+.delivery-field-group:nth-of-type(odd) .tooltip-information-field {
   left: 25px;
   top: -6px;
 }
 
-.deivery-field-group:nth-of-type(odd) .tooltip-information-triangle {
+.delivery-field-group:nth-of-type(odd) .tooltip-information-triangle {
   left: 10px;
 }
 
@@ -2140,7 +2140,7 @@ body {
 }
 
 .modal-closed {
-  display: flex; /*Показать/спрятать модалку*/
+  display: none; /*Показать/спрятать модалку*/
 }
 
 .modal-container {
