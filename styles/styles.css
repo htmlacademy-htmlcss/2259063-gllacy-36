@@ -2126,6 +2126,57 @@ body {
 }
 
 
+/* catalog.html */
+
+/* header с крошками */
+
+.inner-header {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 32px;
+}
+
+.inner-header-title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  list-style-type: none;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link::after {
+  content: "";
+  background-image: url(../images/breadcrumbs.svg);
+  display: block;
+  width: 8px;
+  height: 6px;
+}
+
+.breadcrumbs-link-current {
+  border-bottom: 1.5px solid currentColor;
+}
+
 /* Модальное окно */
 
 .modal {
@@ -2140,7 +2191,8 @@ body {
 }
 
 .modal-closed {
-  display: none; /*Показать/спрятать модалку*/
+  display: none;
+  /*Показать/спрятать модалку*/
 }
 
 .modal-container {
