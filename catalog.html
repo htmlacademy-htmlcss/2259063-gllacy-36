@@ -15,7 +15,7 @@
       <nav class="navigation">
         <ul class="navigation-left-list">
           <li class="navigation-left-item">
-            <a class="navigation-logo-link" href="#">
+            <a class="navigation-logo-link" href="index.html">
               <svg class="navigation-logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="137" height="56" fill="none" viewBox="0 0 137 56">
                 <path fill="#2D3440"
@@ -154,7 +154,7 @@
     <main class="main-index main-container">
       <div class="page-container">
         <header class="inner-header">
-          <h1 class="inner-header-title">Сливочное мороженое</h1>
+          <h2 class="inner-header-title">Сливочное мороженое</h2>
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
@@ -169,8 +169,77 @@
             </li>
           </ol>
         </header>
-        <section class="most-popular-products">
-          <!-- <h2 class="visually-hidden">Подарки при заказе мороженного</h2> -->
+        <section class="result">
+          <h2 class="visually-hidden">Результаты поиска</h2>
+          <form class="result-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="result-select">
+              <h3 class="result-title">Сортировка:</h3>
+              <select class="select-control" aria-label="Сортировка">
+                <option class="select-value" value="popular">По популярности</option>
+                <option class="select-value" value="new">Сначала новые</option>
+                <option class="select-value" value="discount">Со скидкой</option>
+              </select>
+            </div>
+            <div class="result-price">
+              <h3 class="result-title">Цена:</h3>
+              <div class="value-container">
+                <label class="slider-value" for="min">
+                  <input class="control-slider-value" type="text" id="min" value="100 ₽" required>
+                  <span class="visually-hidden">Минимальная стоимость</span>
+                </label>
+                <span class="slider-dash">-</span>
+                <label class="slider-value" for="max">
+                  <input class="control-slider-value" type="text" id="max" value="500 ₽" required>
+                  <span class="visually-hidden">Максимальная стоимость</span>
+                </label>
+              </div>
+              <div class="control-slider">
+                <button class="control-slider-button" type="button">
+                  <span class="visually-hidden">стоимость от.</span>
+                </button>
+                <button class="control-slider-button" type="button">
+                  <span class="visually-hidden">стоимость до.</span>
+                </button>
+              </div>
+            </div>
+            <div class="result-fat">
+              <h3 class="result-title">Жирность:</h3>
+              <ul class="result-fat-list">
+                <li class="result-fat-item">
+                  <label class="control-bluetooth" for="0">
+                    <input class="fat-input visually-hidden" type="radio" value="0%" id="0" name="fat">
+                    <span class="fat-mark"></span>
+                    <span class="fat-name">0%</span>
+                  </label>
+                </li>
+                <li class="result-fat-item">
+                  <label class="control-bluetooth" for="10">
+                    <input class="fat-input visually-hidden" type="radio" value="10%" id="10" name="fat" checked>
+                    <span class="fat-mark"></span>
+                    <span class="fat-name">10%</span>
+                  </label>
+                </li>
+                <li class="result-fat-item">
+                  <label class="control-bluetooth" for="30">
+                    <input class="fat-input visually-hidden" type="radio" value="up to 30%" id="30" name="fat">
+                    <span class="fat-mark"></span>
+                    <span class="fat-name">до 30% </span>
+                  </label>
+                </li>
+                <li class="result-fat-item">
+                  <label class="control-bluetooth" for="30+">
+                    <input class="fat-input visually-hidden" type="radio" value="over 30%" id="30+" name="fat">
+                    <span class="fat-mark"></span>
+                    <span class="fat-name">выше 30% </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </section>
+        <section class="result-cards"></section>
+        <!-- <section class="most-popular-products">
+          <h2 class="visually-hidden">Подарки при заказе мороженного</h2>
           <ul class="most-popular-products-list">
             <li class="most-popular-products-item">
               <a class="most-popular-products-link" href="#">
@@ -257,7 +326,7 @@
               </div>
             </li>
           </ul>
-        </section>
+        </section> -->
       </div>
     </main>
     <footer class="page-footer">
