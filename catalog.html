@@ -10,7 +10,7 @@
   </head>
 
   <body class="pink-body blue-body orange-body">
-    <h1 class="visually-hidden">Интернет-магазин мороженного "GllacyShop"</h1>
+    <h1 class="visually-hidden">каталог сливочного мороженого</h1>
     <header class="page-header">
       <nav class="navigation">
         <ul class="navigation-left-list">
@@ -172,16 +172,16 @@
         <section class="result">
           <h2 class="visually-hidden">Результаты поиска</h2>
           <form class="result-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="result-select">
-              <h3 class="result-title">Сортировка:</h3>
+            <fieldset class="result-select">
+              <legend class="result-title">Сортировка:</legend>
               <select class="select-control" aria-label="Сортировка">
                 <option class="select-value" value="popular">По популярности</option>
                 <option class="select-value" value="new">Сначала новые</option>
                 <option class="select-value" value="discount">Со скидкой</option>
               </select>
-            </div>
-            <div class="result-price">
-              <h3 class="result-title">Цена:</h3>
+            </fieldset>
+            <fieldset class="result-price">
+              <legend class="result-title">Цена:</legend>
               <div class="value-container">
                 <label class="slider-value" for="min">
                   <input class="control-slider-value" type="text" id="min" value="100 ₽" required>
@@ -201,9 +201,9 @@
                   <span class="visually-hidden">стоимость до.</span>
                 </button>
               </div>
-            </div>
-            <div class="result-fat">
-              <h3 class="result-title">Жирность:</h3>
+            </fieldset>
+            <fieldset class="result-fat">
+              <legend class="result-title">Жирность:</legend>
               <ul class="result-fat-list">
                 <li class="result-fat-item">
                   <label class="control-bluetooth" for="0">
@@ -234,7 +234,7 @@
                   </label>
                 </li>
               </ul>
-            </div>
+            </fieldset>
           </form>
         </section>
         <section class="result-cards"></section>

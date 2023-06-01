@@ -1492,7 +1492,7 @@ body {
 /* Преимущества */
 
 .advantages {
-  background-image: url(../images/advantages_background.png);
+  background-image: url(../images/advantages_background.jpg);
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -1844,9 +1844,10 @@ body {
   border: 1px solid #B9B9B9;
   box-shadow: 0 4px 8px rgba(194, 194, 194, 0.2);
   position: absolute;
-  right: -36px;
-  top: 40px;
+  /* right: -36px;
+  top: 40px; */
   border-radius: 1px;
+  z-index: 1;
 }
 
 
@@ -1859,11 +1860,11 @@ body {
 }
 
 .tooltip-information-container {
-  right: 10px;
+  /* right: 10px; */
   display: none;
 }
 
-.tooltip-information-triangle {
+/* .tooltip-information-triangle {
   display: inline-block;
   border: 7px solid transparent;
   border-right: 8px solid #B9B9B9;
@@ -1879,10 +1880,19 @@ body {
   left: -5px;
   border: 7px solid transparent;
   border-right: 8px solid #fff;
-}
+} */
 
-.tooltip-information-field {
-  z-index: 1;
+.tooltip-information-field::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  border: 1px solid #B9B9B9;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: -7px;
+  top: 5px;
 }
 
 
@@ -2208,6 +2218,11 @@ body {
 
 /* Селектор .select-control */
 
+.result-select {
+  border: none;
+  padding: 0;
+}
+
 .select-control {
   font-weight: 400;
   font-size: 14px;
@@ -2243,13 +2258,15 @@ body {
 
 .result-price {
   position: relative;
+  border: none;
+  padding: 0;
 }
 
 .value-container {
   position: absolute;
   display: flex;
   width: 200px;
-  top: -0.5px;
+  top: -28px;
   left: 54px;
   align-items: baseline;
 }
@@ -2304,6 +2321,12 @@ body {
   z-index: 1;
 }
 
+/* Жирность .result-fat */
+
+.result-fat {
+  border: none;
+  padding: 0;
+}
 
 /* Модальное окно */
 
