@@ -2385,6 +2385,63 @@ body {
   padding: 0;
 }
 
+.result-fat-list {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.control-fat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.fat-mark {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #2D3440;
+  border-radius: 50%;
+}
+
+.fat-input[type="radio"]:checked+.fat-mark::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #2D3440;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Псевдосостояния на .result-fat */
+
+.control-fat:hover .fat-mark {
+  border: 2px solid #FCFCFC;
+}
+
+.control-fat:hover .fat-input[type="radio"]:checked:not(:disabled)+.fat-mark::before {
+  background-color: #FCFCFC;
+}
+
+.fat-input:disabled+.fat-mark {
+  border: 2px solid #2D3440;
+  opacity: 0.4;
+}
+
+/**/
+
 /* Модальное окно */
 
 .modal {
