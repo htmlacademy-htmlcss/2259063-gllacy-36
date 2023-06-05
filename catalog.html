@@ -174,7 +174,7 @@
           <form class="result-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="result-select">
               <legend class="result-title">Сортировка:</legend>
-              <select class="select-control" aria-label="Сортировка">
+              <select class="select-control" aria-label="Сортировка" name="sorting">
                 <option class="select-value" value="popular">По популярности</option>
                 <option class="select-value" value="new">Сначала новые</option>
                 <option class="select-value" value="discount">Со скидкой</option>
@@ -184,12 +184,12 @@
               <legend class="result-title">Цена:</legend>
               <div class="value-container">
                 <label class="slider-value" for="min">
-                  <input class="control-slider-value" type="text" id="min" value="100 ₽" required>
+                  <input class="control-slider-value" type="text" id="min" value="100 ₽" name="min price" required>
                   <span class="visually-hidden">Минимальная стоимость</span>
                 </label>
                 <span class="slider-dash">-</span>
                 <label class="slider-value" for="max">
-                  <input class="control-slider-value" type="text" id="max" value="500 ₽" required>
+                  <input class="control-slider-value" type="text" id="max" name="max price" value="500 ₽" required>
                   <span class="visually-hidden">Максимальная стоимость</span>
                 </label>
               </div>
@@ -214,9 +214,9 @@
                 </li>
                 <li class="result-fat-item">
                   <label class="control-fat" for="10">
-                    <input class="fat-input visually-hidden" type="radio" value="10%" id="10" name="fat" checked>
+                    <input class="fat-input visually-hidden" type="radio" value="up to 10%" id="10" name="fat" checked>
                     <span class="fat-mark"></span>
-                    <span class="fat-name">10%</span>
+                    <span class="fat-name">до 10%</span>
                   </label>
                 </li>
                 <li class="result-fat-item">
@@ -561,7 +561,7 @@
                 <span class="most-popular-products-name">Банан</span>
               </a>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочный пломбир с банановым вкусом</p>
+                <p class="most-popular-products-description">Сливочный пломбир<br>с банановым вкусом</p>
                 <div class="most-popular-products-bottom-container">
                   <span class="most-popular-products-price">340 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button">
@@ -605,7 +605,7 @@
                 <span class="most-popular-products-name">Клубничка</span>
               </a>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочный пломбир с клубничным вкусом</p>
+                <p class="most-popular-products-description">Сливочный пломбир<br>с клубничным вкусом</p>
                 <div class="most-popular-products-bottom-container">
                   <span class="most-popular-products-price">300 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button">
@@ -649,7 +649,7 @@
                 <span class="most-popular-products-name">Ментол</span>
               </a>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Сливочный пломбир с ментоловым сиропом</p>
+                <p class="most-popular-products-description">Сливочный пломбир<br>с ментоловым сиропом</p>
                 <div class="most-popular-products-bottom-container">
                   <span class="most-popular-products-price">320 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button">
@@ -693,7 +693,7 @@
                 <span class="most-popular-products-name">Крем-брюле</span>
               </a>
               <div class="most-popular-products-container">
-                <p class="most-popular-products-description">Классическое крем-брюле</p>
+                <p class="most-popular-products-description">Классическое<br>крем-брюле</p>
                 <div class="most-popular-products-bottom-container">
                   <span class="most-popular-products-price">280 ₽/кг</span>
                   <button type="button" class="most-popular-products-cart-button">
