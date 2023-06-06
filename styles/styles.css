@@ -2529,9 +2529,14 @@ body {
   display: block;
 }
 
-.control-fillers:hover .fillers-icon-not-checked path,
-.control-fillers:hover .fillers-icon-checked path {
-  fill: #FCFCFC;
+.fillers-icon-checked path,
+.fillers-icon-not-checked path {
+  fill: currentColor;
+}
+
+.control-fillers:hover .fillers-icon-not-checked,
+.control-fillers:hover .fillers-icon-checked {
+  color: #FCFCFC;
 }
 
 .fillers-input:focus+.fillers-mark {
@@ -2540,9 +2545,9 @@ body {
   border-radius: 2px;
 }
 
-.fillers-input:disabled+.fillers-mark .fillers-icon-not-checked path,
-.fillers-input:disabled+.fillers-mark .fillers-icon-checked path {
-  fill: #2D3440;
+.fillers-input:disabled+.fillers-mark .fillers-icon-not-checked,
+.fillers-input:disabled+.fillers-mark .fillers-icon-checked {
+  color: #2D3440;
   opacity: 0.5;
 }
 
