@@ -1039,7 +1039,7 @@ body {
 
 .popular-product-right-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -1072,6 +1072,7 @@ body {
 
 .not-current-slide {
   opacity: 0.4;
+  margin-top: 203px;
 }
 
 .not-current-slide:not(:last-child) {
@@ -1163,6 +1164,8 @@ body {
 
 .social-list {
   margin-top: 1px;
+  flex-wrap: wrap;
+  max-width: 104px;
 }
 
 .slider-pagination-list {
@@ -1521,6 +1524,7 @@ body {
   background-size: cover;
   border-radius: 16px;
   margin-bottom: 80px;
+  background-color: #FFDBAF;
 }
 
 .advantages-container {
@@ -1633,6 +1637,7 @@ body {
   background-size: cover;
   border-radius: 16px;
   width: 570px;
+  background-color: #FCFCFC;
 }
 
 .serving-aritcle-container {
@@ -1671,6 +1676,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #FCFCFC;
 }
 
 .subscribe-container-inner {
@@ -1713,10 +1719,21 @@ body {
   height: 44px;
 }
 
-/* Доставка */
+/* ДОСТАВКА */
 
 .delivery {
+  background-image: url(../images/delivery_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
   margin-bottom: 80px;
+  background-color:#E7E7E7;
+}
+
+.delivery-container {
+  display: flex;
+  gap: 135px;
+  padding: 64px;
 }
 
 .delivery-title {
@@ -1741,22 +1758,6 @@ body {
   line-height: 22px;
   margin: 0;
   padding: 40px 80px 0 40px;
-}
-
-
-/* ДОСТАВКА */
-
-.delivery {
-  background-image: url(../images/delivery_background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-
-.delivery-container {
-  display: flex;
-  gap: 135px;
-  padding: 64px;
 }
 
 /* Левая часть доставки  */
@@ -1922,6 +1923,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  background-color:#E7E7E7;
 }
 
 .feedback-container {
@@ -2343,7 +2345,7 @@ body {
   position: relative;
   z-index: -1;
   top: -5px;
-  left: -8px;
+  left: -10px;
   display: block;
 }
 
@@ -2425,6 +2427,7 @@ body {
   padding: 8px 24px;
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
+  max-width: 650px;
 }
 
 .control-fat {
@@ -2491,11 +2494,13 @@ body {
 .result-fillers-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 16.8px;
   margin: 0;
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
   padding: 10px 24px;
+  max-width: 823px;
 }
 
 .control-fillers {
@@ -2762,10 +2767,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #2D3440;
-}
-
-.modal-form-label:nth-of-type(3) .input-field::-webkit-resizer {
-  appearance: none;
+  resize: none;
 }
 
 .modal-feedback-form-button {
@@ -2848,6 +2850,10 @@ body {
 
 .subscribe-email:not(:placeholder-shown) {
   border: 1px solid #EA5454;
+}
+
+.subscribe-email:valid {
+  border: 1px solid #B9B9B9;
 }
 
 .login-email:invalid:hover:not(:placeholder-shown),
