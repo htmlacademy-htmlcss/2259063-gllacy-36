@@ -2867,6 +2867,7 @@ body {
 .subscribe-email:invalid:hover:not(:placeholder-shown),
 .modal-feedback-email:hover:not(:placeholder-shown) {
   box-shadow: inset 0 0 0 1px red;
+  border: 1px solid #EA5454;
 }
 
 .login-password:invalid {
