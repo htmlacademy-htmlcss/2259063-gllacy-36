@@ -539,10 +539,9 @@ body {
   opacity: 0.7;
 }
 
-.cart-tooltip-link:focus-visible {
+/* .cart-tooltip-link:focus-visible {
   background-color: #FEAFC3;
-  outline: none;
-}
+} */
 
 .cart-tooltip-link:focus .cart-tooltip-description:first-of-type::after {
   color: currentColor;
@@ -615,7 +614,6 @@ body {
 
 .cart-tooltip-close-button:focus-visible {
   background-color: #FEAFC3;
-  outline: none;
 }
 
 .cart-tooltip-close-button:active .close-button-icon {
@@ -1257,7 +1255,7 @@ body {
 /* Подарки */
 
 .gifts {
-  margin-bottom: 80px;
+  margin-bottom: 82px;
 }
 
 .gifts-list {
@@ -1290,7 +1288,7 @@ body {
   width: 304px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
 }
 
 
@@ -1368,10 +1366,10 @@ body {
   background-color: #FCFCFC;
   border-radius: 8px;
   width: 270px;
-  height: 85%;
   display: block;
   position: absolute;
   z-index: -1;
+  top: 51px;
   bottom: 0;
 }
 
@@ -1523,7 +1521,7 @@ body {
   justify-content: center;
   background-size: cover;
   border-radius: 16px;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
   background-color: #FFDBAF;
 }
 
@@ -1685,6 +1683,7 @@ body {
   padding: 26px;
   background-color: #FFFFFF;
   margin: 6px;
+  border-radius: 16px;
 }
 
 .subscribe-description {
@@ -1719,6 +1718,8 @@ body {
   justify-content: center;
   border: none;
   height: 44px;
+  margin-right: 4px;
+
 }
 
 /* ДОСТАВКА */
@@ -2599,7 +2600,7 @@ body {
 .result-button:disabled {
   background: rgba(252, 252, 252, 0.3);
   opacity: 0.4;
-  border: 2px solid #FCFCFC;
+  /* border: 2px solid #FCFCFC; */
 }
 
 /* Карточки каталога */
@@ -2821,6 +2822,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #B9B9B9;
+  opacity: 1;
 }
 
 .input-field:disabled {
@@ -2848,7 +2850,7 @@ body {
 }
 
 .search-input:not(:placeholder-shown):hover {
-  box-shadow: inset 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px #EA5454;
 }
 
 .login-email:invalid {
@@ -2866,7 +2868,7 @@ body {
 .login-email:invalid:hover:not(:placeholder-shown),
 .subscribe-email:invalid:hover:not(:placeholder-shown),
 .modal-feedback-email:hover:not(:placeholder-shown) {
-  box-shadow: inset 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px #EA5454;
   border: 1px solid #EA5454;
 }
 
@@ -2875,5 +2877,5 @@ body {
 }
 
 .login-password:invalid:hover:not(:placeholder-shown) {
-  box-shadow: inset 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px #EA5454;
 }
