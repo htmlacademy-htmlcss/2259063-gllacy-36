@@ -2573,7 +2573,7 @@ body {
   cursor: pointer;
 }
 
-.result-button:hover {
+.result-button:hover:not(:disabled) {
   background-color: #FCFCFC;
   border: 2px solid rgba(252, 252, 252, 0.3);
 }
