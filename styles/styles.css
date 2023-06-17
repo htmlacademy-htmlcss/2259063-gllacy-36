@@ -428,7 +428,7 @@ body {
 
 .navigation-phone:focus-within {
   border: none;
-  outline: none;
+  border-radius: 10px;
 }
 
 .navigation-phone:active {
