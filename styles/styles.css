@@ -410,7 +410,7 @@ body {
   width: 110%;
   height: 110%;
   border-radius: 16px;
-  background-color: #E7E7E7;
+  background-color: rgba(252, 252, 252, 0.5);
   position: absolute;
   left: -7px;
   z-index: -1;
@@ -2077,8 +2077,10 @@ body {
 }
 
 .footer-menu-link:focus-within {
-  background-color: #E7E7E7;
-  border: none;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.like-link:focus::before {
   outline: none;
 }
 
@@ -2124,9 +2126,8 @@ body {
 
 .academy-logo-link:focus-within,
 .academy-link:focus-within {
-  background-color: #E7E7E7;
+  background-color: rgba(252, 252, 252, 0.5);
   border: none;
-  outline: none;
 }
 
 .academy-logo-link:active .academy-icon path {
@@ -2192,11 +2193,11 @@ body {
 /* Псевдосостояния на .breadcrumbs-link*/
 
 .breadcrumbs-link:hover {
-  opacity: 0.8;
+  background-color: rgba(252, 252, 252, 0.5);
 }
 
 .breadcrumbs-link:focus {
-  outline: 1px solid #FCFCFC;
+  background-color: rgba(252, 252, 252, 0.5);
 }
 
 .breadcrumbs-link:active {
