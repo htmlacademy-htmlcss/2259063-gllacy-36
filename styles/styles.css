@@ -405,19 +405,6 @@ body {
   display: none;
 }
 
-.navigation-phone::before {
-  content: "";
-  width: 110%;
-  height: 110%;
-  border-radius: 16px;
-  background-color: rgba(252, 252, 252, 0.5);
-  position: absolute;
-  left: -7px;
-  z-index: -1;
-  top: -2px;
-  display: none;
-}
-
 .navigation-phone:hover::after {
   display: block;
 }
@@ -2076,10 +2063,6 @@ body {
   display: block;
 }
 
-.footer-menu-link:focus-within {
-  background-color: rgba(252, 252, 252, 0.5);
-}
-
 .like-link:focus::before {
   outline: none;
 }
@@ -2122,12 +2105,6 @@ body {
 .academy-logo-link:hover,
 .academy-link:hover {
   opacity: 0.8;
-}
-
-.academy-logo-link:focus-within,
-.academy-link:focus-within {
-  background-color: rgba(252, 252, 252, 0.5);
-  border: none;
 }
 
 .academy-logo-link:active .academy-icon path {
@@ -2193,11 +2170,7 @@ body {
 /* Псевдосостояния на .breadcrumbs-link*/
 
 .breadcrumbs-link:hover {
-  background-color: rgba(252, 252, 252, 0.5);
-}
-
-.breadcrumbs-link:focus {
-  background-color: rgba(252, 252, 252, 0.5);
+  opacity: 0.9;
 }
 
 .breadcrumbs-link:active {
